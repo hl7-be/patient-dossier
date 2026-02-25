@@ -196,3 +196,5 @@ FSHOnly: false
 
 dependencies:
   hl7.fhir.be.core: current
+  hl7.fhir.be.core-clinical: current
+  

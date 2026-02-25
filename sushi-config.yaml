@@ -181,7 +181,7 @@ parameters:
   apply-jurisdiction: 'true'
   apply-publisher: 'true'
   apply-version: 'true'
-  path-expansion-params: Parameters-terminology-expansion.json
+  path-expansion-params: ../../Parameters-terminology-expansion.json
   special-url: https://www.ehealth.fgov.be/standards/fhir/terminology
 
 # The FSHOnly flag indicates if only FSH resources should be exported.

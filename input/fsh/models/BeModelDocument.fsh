@@ -30,3 +30,5 @@ Characteristics: #can-be-target
 
 * entries 0..* BackboneElement "Entries (CareSets) in the document"
   * reference 1..1 Reference "FHIR reference (e.g., CarePlan/1, Observation/2)"
+
+* presentedForm 0..* Attachment "A narrative easy-to-read representation of the full data set, e.g. PDF-version of a document"

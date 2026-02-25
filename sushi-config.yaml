@@ -11,7 +11,7 @@ id: hl7.fhir.be.patient-dossier
 canonical: https://www.ehealth.fgov.be/standards/fhir/patient-dossier
 url: https://www.ehealth.fgov.be/standards/fhir/patient-dossier
 name: Patient Dossier
-title: "HL7 Belgium FHIR Implementation Guide: Patiend Dossier"
+title: "HL7 Belgium FHIR Implementation Guide: Patient Dossier"
 description: "HL7 Belgium FHIR Implementation Guide: Patient Dossier"
 status: active
 license: CC0-1.0

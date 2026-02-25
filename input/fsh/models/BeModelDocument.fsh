@@ -3,7 +3,7 @@ Title: "BeDocument"
 Description: "Generic logical model for a FHIR document structuring and containing caresets."
 Characteristics: #can-be-target
 
-* identifier 0..1 Identifier "Document identifier"
+* identifier 0..* Identifier "Document identifier"
 * type 1..1 CodeableConcept "Document type"
 * dateTime 1..1 dateTime "Document date/time"
 * title 0..1 string "Title" 
@@ -32,3 +32,4 @@ Characteristics: #can-be-target
   * reference 1..1 Reference "FHIR reference (e.g., CarePlan/1, Observation/2)"
 
 * presentedForm 0..* Attachment "A narrative easy-to-read representation of the full data set, e.g. PDF-version of a document"
+

@@ -13,7 +13,7 @@ url: https://www.ehealth.fgov.be/standards/fhir/patient-dossier
 name: Patient Dossier
 title: "HL7 Belgium FHIR Implementation Guide: Patient Dossier"
 description: "HL7 Belgium FHIR Implementation Guide: Patient Dossier"
-status: active
+status: draft
 license: CC0-1.0
 date: 2020-02-26
 version: 1.0.1
@@ -163,7 +163,7 @@ menu:
     Profiles: artifacts.html#2
     Extensions: artifacts.html#3
     Value Sets: artifacts.html#4
-  Downloads: downloads.html
+#  Downloads: downloads.html
 #  History: http://hl7.org/fhir/us/example/history.html
 
 # The parameters property represents IG.definition.parameter. Rather

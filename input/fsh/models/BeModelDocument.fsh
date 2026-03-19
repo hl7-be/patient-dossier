@@ -1,12 +1,13 @@
 Logical: BeModelDocument
 Title: "BeDocument"
 Description: "Generic logical model for a FHIR document structuring and containing caresets."
+Id: be-model-document
 Characteristics: #can-be-target
 
 * identifier 0..* Identifier "Document identifier"
 * type 1..1 CodeableConcept "Document type"
 * dateTime 1..1 dateTime "Document date/time"
-* title 0..1 string "Title" 
+* title 0..1 string "Title"
 * status 0..1 code "Status"
 * language 0..1 code "Language"
 
@@ -20,16 +21,10 @@ Characteristics: #can-be-target
   * title 0..1 string "Section title"
   * text 0..1 markdown "Section narrative"
   * entry 0..* string "Referenced resources" "FHIR references like CarePlan/1, Observation/2"
-
   * section 0..* BackboneElement "Child sections"
     * ^contentReference = "#BeModelDocument.section"
-
-// ----------------------------
-// Resource Reference (care set entry)
-// ----------------------------
 
 * entries 0..* BackboneElement "Entries (CareSets) in the document"
   * reference 1..1 Reference "FHIR reference (e.g., CarePlan/1, Observation/2)"
 
 * presentedForm 0..* Attachment "A narrative easy-to-read representation of the full data set, e.g. PDF-version of a document"
-

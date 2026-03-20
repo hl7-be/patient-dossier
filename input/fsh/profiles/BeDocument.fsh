@@ -28,4 +28,4 @@ Description: "Minimal document Bundle profile for BeDocument."
 * entry[composition].resource MS
 
 // “careSet” entries are the referenced resources; keep unconstrained but visible
-* entry[careSet].resource 1..1 MS
+//* entry[careSet].resource 1..1 MS  //removed to avoid entries matching 2 slices

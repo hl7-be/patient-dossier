@@ -16,13 +16,12 @@ Characteristics: #can-be-target
 * custodian 0..1 Reference "Custodian"
 
 * section 0..* BackboneElement "Document content sections"
-  * ^id = "BeModelDocument.section"
   * code 0..1 CodeableConcept "Section classification"
-  * title 0..1 string "Section title"
-  * text 0..1 markdown "Section narrative"
+//  * title 0..1 string "Section title"
+//  * text 0..1 markdown "Section narrative"
   * entry 0..* string "Referenced resources" "FHIR references like CarePlan/1, Observation/2"
   * section 0..* BackboneElement "Child sections"
-    * ^contentReference = "#BeModelDocument.section"
+    * ^contentReference = "#be-model-document.section"
 
 * entries 0..* BackboneElement "Entries (CareSets) in the document"
   * reference 1..1 Reference "FHIR reference (e.g., CarePlan/1, Observation/2)"

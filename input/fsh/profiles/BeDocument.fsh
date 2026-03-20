@@ -17,6 +17,8 @@ Description: "Minimal document Bundle profile for BeDocument."
 * entry 1..* MS
 * entry ^slicing.discriminator[0].type = #profile
 * entry ^slicing.discriminator[0].path = "resource"
+* entry ^slicing.discriminator[+].type = #type
+* entry ^slicing.discriminator[=].path = "resource"
 * entry ^slicing.rules = #open
 
 * entry contains

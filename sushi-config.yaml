@@ -15,8 +15,8 @@ title: "HL7 Belgium FHIR Implementation Guide: Patient Dossier"
 description: "HL7 Belgium FHIR Implementation Guide: Patient Dossier"
 status: draft
 license: CC0-1.0
-date: 2020-02-26
-version: 1.0.1
+date: 2026-02-27
+version: 1.0.0
 
 # Although fhirVersions is 0..* in the ImplementationGuide resource
 # it can be a single item OR and array here (but so far SUSHI only
@@ -192,6 +192,6 @@ FSHOnly: false
 
 
 dependencies:
-  hl7.fhir.be.core: current
-  hl7.fhir.be.core-clinical: current
+  hl7.fhir.be.core: 2.1.2
+  hl7.fhir.be.core-clinical: 1.1.0
   

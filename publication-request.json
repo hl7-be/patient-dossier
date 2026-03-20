@@ -1,0 +1,17 @@
+{
+  "package-id": "hl7.fhir.be.patient-dossier",
+  "version": "1.0.0",
+  "first": true,
+  "status": "release",
+  "sequence": "Trial Use",
+  "fhirversion": "R4",
+  "title": "HL7 BE patient dossier IG",
+  "desc": "eHealth FHIR Patient Dossier Profiles for Belgium",
+  "introduction": "eHealth FHIR Patient Dossier Profiles for Belgium",
+  "path": "https://www.ehealth.fgov.be/standards/fhir/patient-dossier/1.0.0",
+  "ci-build": "http://build.fhir.org/ig/hl7-be/patient-dossier",
+  "category": "National Base",
+  "date": "2026-03-27",
+  "mode" : "milestone",
+  "milestone" : true
+}

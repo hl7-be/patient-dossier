@@ -159,10 +159,7 @@ pages:
 menu:
   Home: index.html
   Guidance: guidance.html
-  Artifacts:
-    Profiles: artifacts.html#2
-    Extensions: artifacts.html#3
-    Value Sets: artifacts.html#4
+  Artifacts: artifacts.html
 #  Downloads: downloads.html
 #  History: http://hl7.org/fhir/us/example/history.html
 

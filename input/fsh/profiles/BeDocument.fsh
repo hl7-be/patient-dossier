@@ -20,8 +20,8 @@ Description: "Minimal document Bundle profile for BeDocument."
 * entry ^slicing.rules = #open
 
 * entry contains
-    composition 1..1 MS and
-    careSet 0..* MS
+    composition 1..1 MS 
+//    careSet 0..* MS
 
 * entry[composition].resource 1..1
 //* entry[composition].resource only BeModelDocumentComposition

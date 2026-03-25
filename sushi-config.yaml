@@ -160,8 +160,8 @@ menu:
   Home: index.html
   Guidance: guidance.html
   Artifacts: artifacts.html
-#  Downloads: downloads.html
-#  History: http://hl7.org/fhir/us/example/history.html
+  Downloads: downloads.html
+  History: https://www.ehealth.fgov.be/standards/fhir/patient-dossier/history.html
 
 # The parameters property represents IG.definition.parameter. Rather
 # than a list of code/value pairs (as in the ImplementationGuide

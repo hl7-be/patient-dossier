@@ -37,7 +37,7 @@ releaseLabel: STU1
 # as IG.publisher.  The contact details and/or additional publishers
 # will be translated into IG.contact values.
 publisher:
-  name: eHealth Platform 
+  name: eHealth Platform
   url: https://www.ehealth.fgov.be
   email: support@be-ehealth-standards.atlassian.net
 

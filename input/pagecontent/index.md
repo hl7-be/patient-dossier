@@ -38,3 +38,17 @@ This guide builds on:
 ### Authors and Contributors
 
 This guide is published by the **eHealth Platform** as part of the **BeSafeShare** programme. For questions or feedback, contact [message-structure@ehealth.fgov.be](mailto:message-structure@ehealth.fgov.be).
+
+{% lang-fragment cross-version-analysis-inline.xhtml %}
+ 
+ 
+{% lang-fragment globals-table.xhtml %}
+
+
+{% lang-fragment expansion-params.xhtml %}
+
+
+{% lang-fragment dependency-table-short.xhtml %}
+
+
+{% lang-fragment ip-statements.xhtml %}

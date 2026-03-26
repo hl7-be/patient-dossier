@@ -133,6 +133,8 @@ pages:
     title: Patient Dossier
   guidance.md:
     title: Guidance
+  downloads.xml:
+    title: Downloads
 
 
 # The ImplementationGuide resource defines several other properties

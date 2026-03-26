@@ -12,7 +12,7 @@ This guide covers the following Patient Dossier resources:
 
 | Resource | Description | Status |
 |---|---|---|
-| [BeDocument (Logical Model)](StructureDefinition-be-model-document.html) | Generic logical model for a FHIR document that structures and contains CareSets | Active |
+| [BeDocument (Logical Model)](StructureDefinition-BeModelDocument.html) | Generic logical model for a FHIR document that structures and contains CareSets | Active |
 | [BeDocument (Bundle Profile)](StructureDefinition-be-document.html) | Minimal document Bundle profile constraining the FHIR Bundle to a document containing a Composition and CareSet entries | Active |
 
 The **BeDocument** provides the generic envelope and structure for clinical documents. It does not contain clinical data itself but references and organises other CareSets into a meaningful, shareable, and traceable document. Examples include discharge summaries, referral letters, surgical reports, and consultation reports.
@@ -21,7 +21,7 @@ The **BeDocument** provides the generic envelope and structure for clinical docu
 
 This implementation guide contains the following types of resources:
 
-- **Logical Models** — conceptual representations defining data elements, cardinalities, and descriptions independent of any specific FHIR resource. The [BeDocument logical model](StructureDefinition-be-model-document.html) describes the document structure with sections, entries, and metadata.
+- **Logical Models** — conceptual representations defining data elements, cardinalities, and descriptions independent of any specific FHIR resource. The [BeDocument logical model](StructureDefinition-BeModelDocument.html) describes the document structure with sections, entries, and metadata.
 - **Profiles** — FHIR resource profiles constraining base resources to the Belgian context. The [BeDocument Bundle profile](StructureDefinition-be-document.html) constrains the FHIR Bundle to a document type containing a Composition and CareSet entries.
 - **Value Sets** — coded value sets used within the CareSets, primarily based on SNOMED CT, LOINC, and FHIR standard code systems.
 
@@ -34,7 +34,6 @@ This implementation guide contains the following types of resources:
 
 This guide builds on:
 - [HL7 Belgium FHIR Core](https://www.ehealth.fgov.be/standards/fhir/core) — foundational Belgian FHIR resources and extensions (e.g. Belgian Patient, Practitioner, Organization identifiers).
-- [HL7 Belgium FHIR Core Clinical](https://www.ehealth.fgov.be/standards/fhir/core-clinical) — clinical CareSets such as Procedure, Problem, and Observation that can be referenced from within a BeDocument.
 
 ### Authors and Contributors
 

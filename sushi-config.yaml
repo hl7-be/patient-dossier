@@ -39,14 +39,14 @@ releaseLabel: STU1
 publisher:
   name: eHealth Platform 
   url: https://www.ehealth.fgov.be
-  email: message-structure@www.ehealth.fgov.be
+  email: support@be-ehealth-standards.atlassian.net
 
 # ContactDetail is required by the template.
 contact:
   - name: Message-Structure
     telecom:
       - system: email
-        value: message-structure@www.ehealth.fgov.be
+        value: support@be-ehealth-standards.atlassian.net
         use: work
 
 # The jurisdiction can be a single item or a list. The FHIR Shorthand

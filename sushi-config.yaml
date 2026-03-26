@@ -13,9 +13,9 @@ url: https://www.ehealth.fgov.be/standards/fhir/patient-dossier
 name: Patient Dossier
 title: "HL7 Belgium FHIR Implementation Guide: Patient Dossier"
 description: "HL7 Belgium FHIR Implementation Guide: Patient Dossier"
-status: draft
+status: active
 license: CC0-1.0
-date: 2026-02-27
+date: 2026-03-27
 version: 1.0.0
 
 # Although fhirVersions is 0..* in the ImplementationGuide resource

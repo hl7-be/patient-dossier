@@ -14,18 +14,20 @@ Description: "Minimal document Bundle profile for BeDocument."
 * entry 1..* MS
 * entry.resource 1..1 MS 
 
-* entry 1..* MS
-* entry ^slicing.discriminator[0].type = #profile
-* entry ^slicing.discriminator[0].path = "resource"
-* entry ^slicing.rules = #open
+// * entry ^slicing.discriminator[0].type = #type
+// * entry ^slicing.discriminator[0].path = "resource"
+// * entry ^slicing.discriminator[+].type = #value
+// * entry ^slicing.discriminator[=].path = "resource"
+// * entry ^slicing.rules = #open
+// * entry ^slicing.rules = #open
 
-* entry contains
-    composition 1..1 MS and
-    careSet 0..* MS
+// * entry contains
+//     composition 1..1 MS 
+// //    careSet 0..* MS
 
-* entry[composition].resource 1..1
-//* entry[composition].resource only BeModelDocumentComposition
-* entry[composition].resource MS
+// * entry[composition].resource 1..1
+// //* entry[composition].resource only BeModelDocumentComposition
+// * entry[composition].resource MS
 
-// “careSet” entries are the referenced resources; keep unconstrained but visible
-* entry[careSet].resource 1..1 MS
+// // “careSet” entries are the referenced resources; keep unconstrained but visible
+// //* entry[careSet].resource 1..1 MS  //removed to avoid entries matching 2 slices

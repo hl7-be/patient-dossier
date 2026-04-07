@@ -9,14 +9,14 @@
 
 id: hl7.fhir.be.patient-dossier
 canonical: https://www.ehealth.fgov.be/standards/fhir/patient-dossier
-url: https://www.ehealth.fgov.be/standards/fhir/patient-dossier
+#url: https://www.ehealth.fgov.be/standards/fhir/patient-dossier
 name: Patient Dossier
 title: "HL7 Belgium FHIR Implementation Guide: Patient Dossier"
 description: "HL7 Belgium FHIR Implementation Guide: Patient Dossier"
-status: draft
+status: active
 license: CC0-1.0
-date: 2020-02-26
-version: 1.0.1
+date: 2026-03-27
+version: 1.0.0
 
 # Although fhirVersions is 0..* in the ImplementationGuide resource
 # it can be a single item OR and array here (but so far SUSHI only
@@ -37,16 +37,16 @@ releaseLabel: STU1
 # as IG.publisher.  The contact details and/or additional publishers
 # will be translated into IG.contact values.
 publisher:
-  name: eHealth Platform 
+  name: eHealth Platform
   url: https://www.ehealth.fgov.be
-  email: message-structure@www.ehealth.fgov.be
+  email: support@be-ehealth-standards.atlassian.net
 
 # ContactDetail is required by the template.
 contact:
   - name: Message-Structure
     telecom:
       - system: email
-        value: message-structure@www.ehealth.fgov.be
+        value: support@be-ehealth-standards.atlassian.net
         use: work
 
 # The jurisdiction can be a single item or a list. The FHIR Shorthand
@@ -133,6 +133,8 @@ pages:
     title: Patient Dossier
   guidance.md:
     title: Guidance
+  #downloads.xml:
+    #title: Downloads
 
 
 # The ImplementationGuide resource defines several other properties
@@ -159,12 +161,9 @@ pages:
 menu:
   Home: index.html
   Guidance: guidance.html
-  Artifacts:
-    Profiles: artifacts.html#2
-    Extensions: artifacts.html#3
-    Value Sets: artifacts.html#4
-#  Downloads: downloads.html
-#  History: http://hl7.org/fhir/us/example/history.html
+  Artifacts: artifacts.html
+  #Downloads: downloads.html
+  History: https://www.ehealth.fgov.be/standards/fhir/patient-dossier/history.html
 
 # The parameters property represents IG.definition.parameter. Rather
 # than a list of code/value pairs (as in the ImplementationGuide
@@ -173,9 +172,10 @@ menu:
 # partial list of allowed parameters see:
 # https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
 #parameters:
-#  excludettl: true
+#  
 #  validation: [allow-any-extensions, no-broken-links]
 parameters:
+  excludettl: true
   shownav: 'true'
   apply-contact: 'true'
   apply-jurisdiction: 'true'
@@ -183,6 +183,7 @@ parameters:
   apply-version: 'true'
   path-expansion-params: ../../Parameters-terminology-expansion.json
   special-url: https://www.ehealth.fgov.be/standards/fhir/terminology
+  path-history: https://www.ehealth.fgov.be/standards/fhir/patient-dossier/history.html
 
 # The FSHOnly flag indicates if only FSH resources should be exported.
 # If set to true, no IG related content will be generated.
@@ -195,6 +196,6 @@ FSHOnly: false
 
 
 dependencies:
-  hl7.fhir.be.core: current
-  hl7.fhir.be.core-clinical: current
+  hl7.fhir.be.core: 2.1.2
+  #hl7.fhir.be.core-clinical: 1.1.0
   

@@ -8,32 +8,47 @@ The Patient Dossier CareSets cover clinical domains that are **patient-centric**
 
 ### Scope
 
-This guide covers the following Patient Dossier CareSets:
+This guide covers the following Patient Dossier resources:
 
-| CareSet | Description | Status |
+| Resource | Description | Status |
 |---|---|---|
-| [Medical Procedure](StructureDefinition-be-model-procedure.html) | Clinical procedures performed on or for a patient (surgical, diagnostic, therapeutic, nursing, etc.) | Active |
-| Child Health Report | Health records specific to paediatric care and child development monitoring | Planned |
+| [BeDocument (Logical Model)](StructureDefinition-BeModelDocument.html) | Generic logical model for a FHIR document that structures and contains CareSets | Active |
+| [BeDocument (Bundle Profile)](StructureDefinition-be-document.html) | Minimal document Bundle profile constraining the FHIR Bundle to a document containing a Composition and CareSet entries | Active |
+
+The **BeDocument** provides the generic envelope and structure for clinical documents. It does not contain clinical data itself but references and organises other CareSets into a meaningful, shareable, and traceable document. Examples include discharge summaries, referral letters, surgical reports, and consultation reports.
 
 ### Content
 
 This implementation guide contains the following types of resources:
 
-- **Logical Models** — conceptual representations of each CareSet, defining the data elements, cardinalities, and descriptions independent of any specific FHIR resource.
-- **Profiles** — FHIR resource profiles constraining base resources (e.g. Procedure) to the Belgian context.
+- **Logical Models** — conceptual representations defining data elements, cardinalities, and descriptions independent of any specific FHIR resource. The [BeDocument logical model](StructureDefinition-BeModelDocument.html) describes the document structure with sections, entries, and metadata.
+- **Profiles** — FHIR resource profiles constraining base resources to the Belgian context. The [BeDocument Bundle profile](StructureDefinition-be-document.html) constrains the FHIR Bundle to a document type containing a Composition and CareSet entries.
 - **Value Sets** — coded value sets used within the CareSets, primarily based on SNOMED CT, LOINC, and FHIR standard code systems.
-- **Business Rules** — rules governing data quality, consistency, and usage (e.g. date completeness, body site/laterality coherence, recorder identification).
 
 ### How to Read This Guide
 
 - The **[Guidance](guidance.html)** page provides context on the methodology, conventions, and design principles used throughout this guide.
 - The **[Artifacts](artifacts.html)** page lists all profiles, extensions, and value sets defined in this guide.
-- Each CareSet section includes a conceptual model, a logical model with element descriptions, the associated value sets, and applicable business rules.
 
 ### Dependencies
 
-This guide builds on the [HL7 Belgium FHIR Core](https://www.ehealth.fgov.be/standards/fhir/core) profiles, which define the foundational Belgian FHIR resources and extensions (e.g. Belgian Patient, Practitioner, Organization identifiers).
+This guide builds on:
+- [HL7 Belgium FHIR Core](https://www.ehealth.fgov.be/standards/fhir/core) — foundational Belgian FHIR resources and extensions (e.g. Belgian Patient, Practitioner, Organization identifiers).
 
 ### Authors and Contributors
 
 This guide is published by the **eHealth Platform** as part of the **BeSafeShare** programme. For questions or feedback, contact [message-structure@ehealth.fgov.be](mailto:message-structure@ehealth.fgov.be).
+
+{% lang-fragment cross-version-analysis-inline.xhtml %}
+ 
+ 
+{% lang-fragment globals-table.xhtml %}
+
+
+{% lang-fragment expansion-params.xhtml %}
+
+
+{% lang-fragment dependency-table-short.xhtml %}
+
+
+{% lang-fragment ip-statements.xhtml %}

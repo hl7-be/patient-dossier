@@ -3,3 +3,9 @@
 # Add warning and/or information messages here after you've confirmed that they aren't really a problem
 # (And include comments like this justifying why)
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
+
+# Examples are still missing
+The Implementation Guide contains no examples for this profile
+
+# We use nesting in the logical model
+Hyperlink '#BeModelDocument.section' at 'div/table/tr/td/a' for 'section' resolves to multiple targets ($/text/div/table/tr[10]/td[0]/a[1]/@name, $/snapshot/element/id, $/differential/element/id)

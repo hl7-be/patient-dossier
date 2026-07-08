@@ -20,7 +20,7 @@ Description: "CarePlan profile realising the BeModelCarePlan logical model. Ever
 * period 0..1 MS
 
 // category -> type of care plan (base binds care-plan-category)
-* category 0..1 MS
+* category 0..* MS
 
 // note -> additional free-text information
 * note 0..* MS
@@ -42,7 +42,7 @@ Description: "CarePlan profile realising the BeModelCarePlan logical model. Ever
 * subject 1..1 MS
 
 // encounter -> the encounter referencing this CareSet
-* encounter 0..1 MS
+// * encounter 0..1 MS
 
 // description -> description of the CarePlan
 * description 0..1 MS

@@ -8,6 +8,7 @@ Description: "CarePlan profile realising the BeModelCarePlan logical model. Ever
 * identifier 1..* MS
 
 // author -> healthcare professional responsible for the recorded content
+* author only Reference(BePractitioner or BePractitionerRole)
 * author 1..1 MS
 
 // status -> registration status / lifecycle (base binds request-status, required)
@@ -36,9 +37,11 @@ Description: "CarePlan profile realising the BeModelCarePlan logical model. Ever
 * addresses 0..* MS
 
 // careTeam -> the team involved in the actions
+* careTeam only Reference(BeCareTeam)
 * careTeam 0..* MS
 
 // patient -> the subject of the care
+* subject only Reference(BePatient)
 * subject 1..1 MS
 
 // encounter -> the encounter referencing this CareSet
@@ -63,6 +66,7 @@ Description: "CarePlan profile realising the BeModelCarePlan logical model. Ever
 * partOf 0..1 MS
 
 // contributor -> the person(s) who add content to the CarePlan
+* contributor only Reference(BePractitioner or BePatient or RelatedPerson)
 * contributor 0..* MS
 
 // intent -> intent of the CarePlan (base binds care-plan-intent, required)

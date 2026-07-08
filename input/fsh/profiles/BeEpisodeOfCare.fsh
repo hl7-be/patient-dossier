@@ -11,6 +11,7 @@ Description: "EpisodeOfCare profile realising the BeModelEpisodeOfCare logical m
 * identifier 1..* MS
 
 // patient -> The person who is the subject of the healthcare
+* patient only Reference(BePatient)
 * patient 1..1 MS
 
 // status -> Current status of the episode (base already binds episode-of-care-status, required)
@@ -26,6 +27,7 @@ Description: "EpisodeOfCare profile realising the BeModelEpisodeOfCare logical m
 
 // managingOrganization -> Organization responsible for management and coordination
 // Note: the model allows 0..*, but the base R4 EpisodeOfCare caps this at 0..1
+* managingOrganization only Reference(BeOrganization)
 * managingOrganization 0..1 MS
 
 // Model elements with no native R4 EpisodeOfCare equivalent -> extensions

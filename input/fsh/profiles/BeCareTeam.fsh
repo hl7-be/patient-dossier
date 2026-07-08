@@ -26,10 +26,12 @@ Description: "CareTeam profile realising the BeModelCareTeam logical model. Ever
 
 // participant -> the participants included in the CareTeam
 * participant 1..* MS
+* participant.member only Reference(BePatient or BePractitioner or BeOrganization or CareTeam)
 * participant.member 1..1 MS
 * participant.role MS
 
 // managingOrganization -> the organization responsible for the CareTeam
+* managingOrganization only Reference(BeOrganization)
 * managingOrganization 0..1 MS
 
 // condition -> the condition/problem for which the CareTeam was assembled
@@ -37,6 +39,7 @@ Description: "CareTeam profile realising the BeModelCareTeam logical model. Ever
 * reasonReference 0..* MS
 
 // patient -> the subject of the CareSet
+* subject only Reference(BePatient)
 * subject 1..1 MS
 
 // telecom -> the contact details to reach the CareTeam
@@ -49,6 +52,6 @@ Description: "CareTeam profile realising the BeModelCareTeam logical model. Ever
 // author -> be-core BeExtRecorder
 * extension contains
     BeCareSetRecordedDate named recordedDate 1..1 MS and
-    BeCareSetCreated named created 1..1 MS and
+    BeCareSetCreated named created 0..1 MS and
     $BeExtRecorder named author 1..1 MS and
     BeCareTeamCarePlan named carePlan 0..* MS

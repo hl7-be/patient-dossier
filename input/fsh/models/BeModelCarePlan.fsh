@@ -24,7 +24,7 @@ Characteristics: #can-be-target
 * period 0..1 Period "Time period for which this CareSet is valid"
 
 // Identificeert welk type zorgplan de CareSet omvat. Zie VS_CarePlan_Category
-* category 0..1 CodeableConcept "Identifies the type of care plan this CareSet represents"
+* category 0..* CodeableConcept "Identifies the type of care plan this CareSet represents"
 * category from http://hl7.org/fhir/ValueSet/care-plan-category (extensible)
 
 // Aanvullende informatie met betrekking tot de CareSet-inhoud in vrije tekstvorm

@@ -19,7 +19,7 @@ Description: "CareTeam profile realising the BeModelCareTeam logical model. Ever
 * period 0..1 MS
 
 // category -> the type of CareTeam (base binds care-team-category)
-* category 1..1 MS
+* category 0..* MS
 
 // name -> the name given to the CareTeam
 * name 0..1 MS

@@ -23,7 +23,7 @@ Characteristics: #can-be-target
 * period 0..1 Period "The period for which the CareSet is valid"
 
 // Geeft het soort CareTeam weer. Zie VS_CareTeam_Category
-* category 1..1 CodeableConcept "Indicates the type of CareTeam"
+* category 0..* CodeableConcept "Indicates the type of CareTeam"
 * category from http://hl7.org/fhir/ValueSet/care-team-category (extensible)
 
 // De naam die aan het CareTeam wordt gegeven

@@ -51,12 +51,15 @@ Description: "CarePlan profile realising the BeModelCarePlan logical model. Ever
 * title 0..1 MS
 
 // replaces -> previous version of the CarePlan this one replaces
+* replaces only Reference(BeCarePlan)
 * replaces 0..* MS
 
 // basedOn -> the CarePlan this one is based on
+* basedOn only Reference(BeCarePlan)
 * basedOn 0..* MS
 
 // partOf -> the parent CareSet this CareSet is part of
+* partOf only Reference(BeCarePlan)
 * partOf 0..1 MS
 
 // contributor -> the person(s) who add content to the CarePlan

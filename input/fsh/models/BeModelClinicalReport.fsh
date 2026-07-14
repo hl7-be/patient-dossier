@@ -51,11 +51,6 @@ Description: "Logical model of the CareSet ClinicalReport: a clinical report tha
 * insert Xlate(code, nl, "Code van het verslag. Het geeft het type procedure aan dat leidt tot de productie van de primaire waarden (measurement clinical observations\) van dit verslag. Zie VS_Rep_Code.")
 * insert Xlate(code, fr, "Code du rapport. On propose d'indiquer le type de procédure qui conduit à la production des valeurs primaires (measurement clinical observations\) de ce rapport. Voir VS_Rep_Code.")
 
-* device 0..1 SU CodeableConcept "Medical device used to create the observations" "Reference to the medical device used to create the observations of the report, provided that all observations included in the report use the same device. See BR DRO 'Device for ClinicalReport and Observation'. See VS_Obs_Device."
-* device from BeVSClinicalReportDevice (extensible)
-* insert Xlate(device, nl, "Verwijzing naar het medische hulpmiddel dat gebruikt is om de observaties van het verslag te maken\, op voorwaarde dat alle in het verslag opgenomen observaties hetzelfde hulpmiddel gebruiken. Zie BR DRO 'Device voor ClinicalReport en Observation'. Zie VS_Obs_Device.")
-* insert Xlate(device, fr, "Référence au dispositif médical utilisé pour créer les observations du rapport\, à condition que toutes les observations incluses dans le rapport utilisent le même dispositif. Voir BR DRO « Device pour ClinicalReport et Observation ». Voir VS_Obs_Device.")
-
 * clinicalObservations 0..* SU Reference(Observation) "Referenced clinical observations" "List of references to the different ClinicalObservations that are part of the report."
 * insert Xlate(clinicalObservations, nl, "Lijst met verwijzingen naar de verschillende ClinicalObservations die deel uitmaken van het verslag.")
 * insert Xlate(clinicalObservations, fr, "Liste des références des différents ClinicalObservations qui font parties du rapport.")

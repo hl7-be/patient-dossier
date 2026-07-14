@@ -1,18 +1,20 @@
 // =============================================================================
 // Profile: BeClinicalReport - CareSet ClinicalReport on DiagnosticReport (R4).
 // Belgian naming conventions (BeClinicalReport / be-clinicalreport) and reuse of
-// the eHealth Federal Core (hl7.fhir.be.core#2.1.2): BePatient, BePractitioner,
-// BePractitionerRole, BeOrganization, BeExtRecorder, BeExtSimpleNote.
+// the eHealth Federal Core (hl7.fhir.be.core): BePatient, BePractitioner,
+// BePractitionerRole, BeOrganization, BeExtRecorder, BeExtRecordedDate,
+// BeExtSimpleNote.
 // Every element of the BeModelClinicalReport logical model is covered here and,
 // per the Belgian conventions, flagged Must Support (MS).
 //   businessIdentifier -> identifier            note                 -> extension[note] (BeExtSimpleNote)
 //   basedOn            -> basedOn               document             -> presentedForm
-//   recordedDate       -> extension[recordedDate]   status           -> status
+//   recordedDate       -> extension[recordedDate] (BeExtRecordedDate) status -> status
 //   observationPeriod  -> effectivePeriod       recorder             -> extension[recorder] (BeExtRecorder)
-//   patient            -> subject (BePatient)   device               -> extension[device]
-//   interpreter        -> resultsInterpreter    clinicalObservations -> result
-//   category           -> category              diagnosis            -> conclusionCode
-//   code               -> code
+//   patient            -> subject (BePatient)   clinicalObservations -> result
+//   interpreter        -> resultsInterpreter    diagnosis            -> conclusionCode
+//   category           -> category              code                 -> code
+// (Device is intentionally not on the report: the device producing the
+//  observations is carried by the ClinicalObservation resource - see BR DRO.)
 // =============================================================================
 
 Profile: BeClinicalReport
@@ -25,13 +27,11 @@ Description: "CareSet ClinicalReport: a clinical report that collects the essent
 
 // --- Extensions: reuse be-core (recorder, note); local for recordedDate, device
 * extension contains
-    BeExtRecordedDate named recordedDate 1..1 MS and
+    $BeExtRecordedDate named recordedDate 1..1 MS and
     $BeExtRecorder named recorder 1..1 MS and
-    BeExtReportDevice named device 0..1 MS and
     $BeExtSimpleNote named note 0..* MS
 * extension[recordedDate] ^short = "Date the report was recorded / last updated (RecordedDate)"
 * extension[recorder] ^short = "Who recorded the report (Recorder)"
-* extension[device] ^short = "Medical device used to create the observations (Device)"
 * extension[note] ^short = "Free-text additional information (Note)"
 
 // --- businessIdentifier -> identifier ---

@@ -13,8 +13,14 @@
 //   patient            -> subject (BePatient)   clinicalObservations -> result
 //   interpreter        -> resultsInterpreter    diagnosis            -> conclusionCode
 //   category           -> category              code                 -> code
-// (Device is intentionally not on the report: the device producing the
-//  observations is carried by the ClinicalObservation resource - see BR DRO.)
+//   interpretation     -> extension[interpretation] (conclusion) + conclusionCode
+// Per V0.07: Device is no longer an element of the report - the device that
+// produces the observations is carried by the ClinicalObservation CareSet.
+// Note on interpretation/diagnosis: DiagnosticReport has no element for a
+// Reference(Condition) in any version, and conclusionCode is defined as "codes
+// that represent the summary conclusion (interpretation/impression) of the
+// report", so both the diagnosis codes and the coded form of the interpretation
+// are carried by conclusionCode.
 // =============================================================================
 
 Profile: BeClinicalReport
@@ -25,7 +31,7 @@ Description: "CareSet ClinicalReport: a clinical report that collects the essent
 * ^status = #draft
 * ^experimental = true
 
-// --- Extensions: reuse be-core (recorder, note); local for recordedDate, device
+// --- Extensions: reuse be-core (recordedDate, recorder, note)
 * extension contains
     $BeExtRecordedDate named recordedDate 1..1 MS and
     $BeExtRecorder named recorder 1..1 MS and
@@ -77,9 +83,19 @@ Description: "CareSet ClinicalReport: a clinical report that collects the essent
 * result MS
 * result ^short = "Referenced clinical observations"
 
-// --- diagnosis -> conclusionCode ---
+// --- interpretation -> conclusion (free text) ---
+// R4's conclusion is 0..1 while the model says 0..*; the repeats therefore live
+// in conclusionCode below. Preadopting a repeating conclusion via the
+// same-version extension http://hl7.org/fhir/4.0/StructureDefinition/
+// extension-DiagnosticReport.conclusion is not possible today: SUSHI resolves
+// that URL only from a package named hl7.fhir.uv.xver-r4.r4, which is not
+// published (xver packages exist only for differing version pairs).
+* conclusion 0..1 MS
+* conclusion ^short = "Clinical conclusion (interpretation) of the results, as free text"
+
+// --- diagnosis + coded interpretation -> conclusionCode ---
 * conclusionCode MS
-* conclusionCode ^short = "Diagnosis / problem concluded from the report"
+* conclusionCode ^short = "Diagnosis and/or coded clinical interpretation concluded from the report"
 
 // --- document -> presentedForm ---
 * presentedForm 0..1 MS

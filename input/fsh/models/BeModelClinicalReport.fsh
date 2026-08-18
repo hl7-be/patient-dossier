@@ -1,6 +1,9 @@
 // =============================================================================
-// Logical model: CareSet ClinicalReport (generic) - V00.06
-// Derived from "Careset Clinical Report V00.06 FR" business & functional specs.
+// Logical model: CareSet ClinicalReport (generic) - V0.07
+// Derived from "Careset Clinical Report V0.07 FR" business & functional specs.
+// V0.07 changes: Device is no longer an element of the report (the device that
+// produces the observations is carried by the ClinicalObservation CareSet);
+// Interpretation (0..*) added.
 // English name/short/definition inline; Dutch (nl) and French (fr) translations
 // added via `insert Xlate(...)` - one call per language (see rulesets.fsh).
 // Every element is Must Support (SU), per the Belgian conventions.
@@ -40,6 +43,10 @@ Description: "Logical model of the CareSet ClinicalReport: a clinical report tha
 * interpreter 0..1 SU Reference "Who interprets the observations of the report" "The care provider who interprets the observations of the report. E.g. endocrinologist, general practitioner. See BR PP 'Identification of a physical person'."
 * insert Xlate(interpreter, nl, "De zorgverlener die de observaties van het verslag interpreteert. Bv.: endocrinoloog\, huisarts. Zie BR PP 'Identificatie natuurlijke persoon'.")
 * insert Xlate(interpreter, fr, "Le prestataire de soins qui interprète les observations du rapport. Ex. : NISS endocrinologue\, NISS généraliste. Voir BR PP « Identification personne physique ».")
+
+* interpretation 0..* SU CodeableConcept "Clinical conclusion (interpretation) of the results" "Clinical conclusion (interpretation) of the test results, expressed as a code or as free text. This element is provided by the care provider who performs the interpretation. See BR RIN."
+* insert Xlate(interpretation, nl, "Klinische conclusie (interpretatie\) van de testresultaten\, uitgedrukt als code of als vrije tekst. Dit element wordt geleverd door de zorgverlener die de interpretatie uitvoert. Zie BR RIN.")
+* insert Xlate(interpretation, fr, "Conclusion clinique (interprétation\) de résultat de tests\, exprimée en code ou texte libre. Cet élément sera fourni par le prestataire de soins qui fait l'interprétation. Voir BR RIN.")
 
 * category 1..* SU CodeableConcept "Clinical/functional classification of the report" "A category is a classification attribute of a data element in a CareSet, defined by a standardised ValueSet, allowing information to be grouped according to its clinical or functional meaning. E.g. Glucose monitoring, Cardiology. See VS_Rep_Category."
 * category from BeVSClinicalReportCategory (extensible)

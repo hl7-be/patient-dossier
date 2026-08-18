@@ -59,26 +59,7 @@ Description: "Codes for a ClinicalReport. Extensible: standardised codes (e.g. S
 * ^experimental = true
 * include codes from system BeCSClinicalReportCode
 
-// -----------------------------------------------------------------------------
-// VS_Device - medical device used to create the observations of the report.
-// -----------------------------------------------------------------------------
-CodeSystem: BeCSClinicalReportDevice
-Id: be-cs-clinicalreport-device
-Title: "BE CS ClinicalReport Device"
-Description: "Example CareSet-specific codes for the medical device used to create the observations of a ClinicalReport."
-* ^status = #draft
-* ^experimental = true
-* ^caseSensitive = true
-* #freestyle-libre "FreeStyle Libre Flash Glucose Monitoring System"
-  * ^designation[+].language = #fr
-  * ^designation[=].value = "Système FreeStyle Libre de surveillance flash du glucose"
-  * ^designation[+].language = #nl
-  * ^designation[=].value = "FreeStyle Libre Flash-glucosemonitoringsysteem"
-
-ValueSet: BeVSClinicalReportDevice
-Id: be-vs-clinicalreport-device
-Title: "BE VS ClinicalReport Device"
-Description: "Medical devices used to create the observations of a ClinicalReport. Extensible: standardised device codes may also be used."
-* ^status = #draft
-* ^experimental = true
-* include codes from system BeCSClinicalReportDevice
+// NOTE: VS_Device is intentionally NOT defined here. As of V0.07 Device is no
+// longer an element of the ClinicalReport; it is a transversal value set bound
+// by the ClinicalObservation CareSet, which carries the device that produces
+// the observations.

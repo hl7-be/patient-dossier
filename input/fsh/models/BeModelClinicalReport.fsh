@@ -44,11 +44,13 @@ Description: "Logical model of the CareSet ClinicalReport: a clinical report tha
 * insert Xlate(interpreter, nl, "De zorgverlener die de observaties van het verslag interpreteert. Bv.: endocrinoloog\, huisarts. Zie BR PP 'Identificatie natuurlijke persoon'.")
 * insert Xlate(interpreter, fr, "Le prestataire de soins qui interprète les observations du rapport. Ex. : NISS endocrinologue\, NISS généraliste. Voir BR PP « Identification personne physique ».")
 
-* interpretation 0..* SU CodeableConcept "Clinical conclusion (interpretation) of the results" "Clinical conclusion (interpretation) of the test results, expressed as a code or as free text. This element is provided by the care provider who performs the interpretation. See BR RIN."
+* interpretation 0..1 SU string "Textual interpretation of the observations and/or the thought process that leads to a conclusion"
+
+* conclusion 0..* SU CodeableConcept "Clinical conclusion (interpretation) of the results" "Clinical conclusion (interpretation) of the test results, expressed as a code or as free text. This element is provided by the care provider who performs the interpretation. See BR RIN."
 * insert Xlate(interpretation, nl, "Klinische conclusie (interpretatie\) van de testresultaten\, uitgedrukt als code of als vrije tekst. Dit element wordt geleverd door de zorgverlener die de interpretatie uitvoert. Zie BR RIN.")
 * insert Xlate(interpretation, fr, "Conclusion clinique (interprétation\) de résultat de tests\, exprimée en code ou texte libre. Cet élément sera fourni par le prestataire de soins qui fait l'interprétation. Voir BR RIN.")
 
-* category 1..* SU CodeableConcept "Clinical/functional classification of the report" "A category is a classification attribute of a data element in a CareSet, defined by a standardised ValueSet, allowing information to be grouped according to its clinical or functional meaning. E.g. Glucose monitoring, Cardiology. See VS_Rep_Category."
+* category 0..* SU CodeableConcept "Clinical/functional classification of the report" "A category is a classification attribute of a data element in a CareSet, defined by a standardised ValueSet, allowing information to be grouped according to its clinical or functional meaning. E.g. Glucose monitoring, Cardiology. See VS_Rep_Category."
 * category from BeVSClinicalReportCategory (extensible)
 * insert Xlate(category, nl, "Een categorie is een classificatiekenmerk van een gegevenselement in een CareSet\, gedefinieerd door een gestandaardiseerde ValueSet\, waarmee informatie kan worden gegroepeerd volgens de klinische of functionele betekenis ervan. Bv. Glucosemonitoring\, Cardiologie. Zie VS_Rep_Category.")
 * insert Xlate(category, fr, "Une catégorie est un attribut de classification d'un élément de données dans un CareSet\, défini par une ValueSet standardisée\, permettant de regrouper les informations selon leur signification clinique ou fonctionnelle. Ex. Suivi Glycémie\, Cardio. Voir VS_Rep_Category.")
@@ -62,9 +64,9 @@ Description: "Logical model of the CareSet ClinicalReport: a clinical report tha
 * insert Xlate(clinicalObservations, nl, "Lijst met verwijzingen naar de verschillende ClinicalObservations die deel uitmaken van het verslag.")
 * insert Xlate(clinicalObservations, fr, "Liste des références des différents ClinicalObservations qui font parties du rapport.")
 
-* diagnosis 0..* SU CodeableConcept "Diagnosis / problem concluded from the report" "Reference to the problem related to this clinical report. This element is provided by the care provider who performs the interpretation."
-* insert Xlate(diagnosis, nl, "Verwijzing naar het probleem dat verband houdt met dit klinische verslag. Dit element wordt geleverd door de zorgverlener die de interpretatie uitvoert.")
-* insert Xlate(diagnosis, fr, "Référence du problème en rapport avec ce rapport clinique. Cet élément sera fourni par le prestataire de soins qui fait l'interprétation.")
+// * diagnosis 0..* SU CodeableConcept "Diagnosis / problem concluded from the report" "Reference to the problem related to this clinical report. This element is provided by the care provider who performs the interpretation."
+// * insert Xlate(diagnosis, nl, "Verwijzing naar het probleem dat verband houdt met dit klinische verslag. Dit element wordt geleverd door de zorgverlener die de interpretatie uitvoert.")
+// * insert Xlate(diagnosis, fr, "Référence du problème en rapport avec ce rapport clinique. Cet élément sera fourni par le prestataire de soins qui fait l'interprétation.")
 
 * note 0..* SU Annotation "Free-text additional information" "Additional information about the content of the CareSet, in free text format."
 * insert Xlate(note, nl, "Aanvullende informatie over de inhoud van de CareSet in vrijetekstformaat.")

@@ -11,16 +11,15 @@
 //   recordedDate       -> extension[recordedDate] (BeExtRecordedDate) status -> status
 //   observationPeriod  -> effectivePeriod       recorder             -> extension[recorder] (BeExtRecorder)
 //   patient            -> subject (BePatient)   clinicalObservations -> result
-//   interpreter        -> resultsInterpreter    diagnosis            -> conclusionCode
-//   category           -> category              code                 -> code
-//   interpretation     -> conclusion (text) + conclusionCode (coded)
+//   interpreter        -> resultsInterpreter    category             -> category
+//   interpretation     -> conclusion (text)     code                 -> code
+//   conclusion         -> conclusionCode (coded)
 // Per V0.07: Device is no longer an element of the report - the device that
 // produces the observations is carried by the ClinicalObservation CareSet.
-// Note on interpretation/diagnosis: DiagnosticReport has no element for a
-// Reference(Condition) in any version, and conclusionCode is defined as "codes
-// that represent the summary conclusion (interpretation/impression) of the
-// report", so both the diagnosis codes and the coded form of the interpretation
-// are carried by conclusionCode.
+// The model splits the former single 'interpretation' element in two: a free-text
+// interpretation (0..1 string) and a coded clinical conclusion (0..* CodeableConcept),
+// which map onto DiagnosticReport.conclusion and DiagnosticReport.conclusionCode
+// respectively. 'diagnosis' is no longer an element of the model.
 // =============================================================================
 
 Profile: BeClinicalReport
@@ -53,7 +52,7 @@ Description: "CareSet ClinicalReport: a clinical report that collects the essent
 * status ^short = "Status of the report (default: final)"
 
 // --- category -> category ---
-* category 1..* MS
+* category 0..* MS
 * category from BeVSClinicalReportCategory (extensible)
 * category ^short = "Clinical/functional classification of the report"
 
@@ -85,13 +84,13 @@ Description: "CareSet ClinicalReport: a clinical report that collects the essent
 
 // --- interpretation -> conclusion (free text) ---
 // The textual interpretation is 0..1; a report carries at most one free-text
-// conclusion. Coded interpretations repeat in conclusionCode below.
+// interpretation. The coded conclusions repeat in conclusionCode below.
 * conclusion 0..1 MS
-* conclusion ^short = "Clinical conclusion (interpretation) of the results, as free text"
+* conclusion ^short = "Textual interpretation of the observations and/or the thought process that leads to a conclusion"
 
-// --- diagnosis + coded interpretation -> conclusionCode ---
+// --- conclusion -> conclusionCode ---
 * conclusionCode MS
-* conclusionCode ^short = "Diagnosis and/or coded clinical interpretation concluded from the report"
+* conclusionCode ^short = "Clinical conclusion (interpretation) of the results"
 
 // --- document -> presentedForm ---
 * presentedForm 0..1 MS

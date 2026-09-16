@@ -35,8 +35,9 @@ Characteristics: #can-be-target
 
 // FR: Le problème traité durant l'EpisodeOfCare. Voir VS_Encounter_Reason.
 // NL: Het probleem dat tijdens de EpisodeOfCare zal behandeld worden. Zie VS_Encounter_Reason.
-* reason 1..* Reference "The problem treated during the EpisodeOfCare"
-* reason from http://hl7.org/fhir/ValueSet/encounter-reason (extensible)
+* reason 0..* Reference "The problem treated during the EpisodeOfCare"
+* reasonCode 0..* CodeableConcept "The problem treated during the EpisodeOfCare"
+* reasonCode from http://hl7.org/fhir/ValueSet/encounter-reason (extensible)
 
 // FR: Remarque complémentaire éventuelle.
 // NL: Eventueel aanvullende opmerking.

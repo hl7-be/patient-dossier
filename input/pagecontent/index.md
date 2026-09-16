@@ -14,8 +14,12 @@ This guide covers the following Patient Dossier resources:
 |---|---|---|
 | [BeDocument (Logical Model)](StructureDefinition-BeModelDocument.html) | Generic logical model for a FHIR document that structures and contains CareSets | Active |
 | [BeDocument (Bundle Profile)](StructureDefinition-be-document.html) | Minimal document Bundle profile constraining the FHIR Bundle to a document containing a Composition and CareSet entries | Active |
+| [BeClinicalReport (Logical Model)](StructureDefinition-BeModelClinicalReport.html) | Logical model of the CareSet ClinicalReport, consolidating the clinical observations of one medical context over a defined period | Draft |
+| [BeClinicalReport (DiagnosticReport Profile)](StructureDefinition-be-clinicalreport.html) | DiagnosticReport profile carrying the CareSet ClinicalReport, with its interpretation, conclusions and referenced observations | Draft |
 
 The **BeDocument** provides the generic envelope and structure for clinical documents. It does not contain clinical data itself but references and organises other CareSets into a meaningful, shareable, and traceable document. Examples include discharge summaries, referral letters, surgical reports, and consultation reports.
+
+The **BeClinicalReport** carries the clinical content itself: the consolidated report of one patient's follow-up over a defined observation period. See its [usage, boundaries and relationships](StructureDefinition-be-clinicalreport.html) for how it relates to BeDocument and to the ClinicalObservation CareSet.
 
 ### Content
 

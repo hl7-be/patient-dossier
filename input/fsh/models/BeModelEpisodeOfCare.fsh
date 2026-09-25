@@ -18,7 +18,7 @@ Characteristics: #can-be-target
 
 // FR: Date du premier enregistrement (jj/mm/aaaa).
 // NL: Datum van eerste registratie (dd/mm/yyyy).
-* creationDate 1..1 dateTime "Date of first registration"
+// * creationDate 1..1 dateTime "Date of first registration"
 
 // FR: Statut actuel de l'épisode. Voir VS_EpisodeOfCare_Status.
 // NL: Huidige status van de episode. Zie VS_EpisodeOfCare_Status.
@@ -31,13 +31,14 @@ Characteristics: #can-be-target
 
 // FR: La période comprise entre le moment où la ressource est créée afin de regrouper les soins fournis et le moment où elle prend fin.
 // NL: De periode tussen het moment dat de resource wordt gecreëerd om de verleende zorg te groeperen en het moment dat deze wordt opgeheven.
-* period 0..1 Period "The period between the moment the resource is created to group the provided care and the moment it ends"
+* period 1..1 Period "The period between the moment the resource is created to group the provided care and the moment it ends"
 
-// FR: Le problème traité durant l'EpisodeOfCare. Voir VS_Encounter_Reason.
-// NL: Het probleem dat tijdens de EpisodeOfCare zal behandeld worden. Zie VS_Encounter_Reason.
-* reason 0..* Reference "The problem treated during the EpisodeOfCare"
-* reasonCode 0..* CodeableConcept "The problem treated during the EpisodeOfCare"
-* reasonCode from http://hl7.org/fhir/ValueSet/encounter-reason (extensible)
+// FR: Le problème principal traité durant l'EpisodeOfCare. Voir VS_Encounter_Reason.
+// NL: Het hoofdprobleem dat tijdens de EpisodeOfCare zal behandeld worden. Zie VS_Encounter_Reason.
+* reason 1..1 BackboneElement "The main problem treated during the EpisodeOfCare"
+* reason.reference 0..1 Reference "The main problem treated during the EpisodeOfCare, as a reference"
+* reason.code 0..1 CodeableConcept "The main problem treated during the EpisodeOfCare, as a code"
+* reason.code from http://hl7.org/fhir/ValueSet/encounter-reason (extensible)
 
 // FR: Remarque complémentaire éventuelle.
 // NL: Eventueel aanvullende opmerking.
@@ -45,4 +46,17 @@ Characteristics: #can-be-target
 
 // FR: Organisation responsable de la gestion et coordination de l'EpisodeOfCare du patient. Référence à la resource Organization.
 // NL: Organisatie die verantwoordelijk is voor het beheer en coördinatie van de EpisodeOfCare van de patiënt.
-* managingOrganization 0..* Reference "Organization responsible for the management and coordination of the patient's EpisodeOfCare"
+* managingOrganization 0..1 Reference "Organization responsible for the management and coordination of the patient's EpisodeOfCare" "The organization responsible for the management and coordination of the patient's EpisodeOfCare. The responsibility is not shared: there is one responsible organization, or none."
+
+// Other organizations involved in the EpisodeOfCare. Commented out for now.
+// These are NOT managing organizations and carry NO responsibility for the
+// management or coordination of the EpisodeOfCare - that responsibility belongs
+// to managingOrganization above and is not divisible. They are merely other
+// organizations taking part in the care grouped by this EpisodeOfCare.
+// FR: Autres organisations impliquées dans l'EpisodeOfCare, sans responsabilité de gestion ni de coordination.
+// NL: Andere organisaties die betrokken zijn bij de EpisodeOfCare, zonder verantwoordelijkheid voor beheer of coördinatie.
+// * involvedOrganization 0..* Reference "Other organizations involved in the EpisodeOfCare, without management or coordination responsibility" "Organizations taking part in the care grouped by this EpisodeOfCare. They neither manage nor coordinate it and bear no responsibility for it; that is carried solely by managingOrganization."
+
+// FR: L'équipe ou les équipes de soins qui participent à l'EpisodeOfCare. Référence à la resource CareTeam.
+// NL: Het zorgteam of de zorgteams die deelnemen aan de EpisodeOfCare. Verwijzing naar de CareTeam resource.
+* careTeam 0..* Reference "The care team(s) participating in the EpisodeOfCare"

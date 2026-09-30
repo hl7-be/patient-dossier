@@ -26,9 +26,10 @@ Description: "CareTeam profile realising the BeModelCareTeam logical model. Ever
 
 // participant -> the participants included in the CareTeam
 * participant 1..* MS
-* participant.member only Reference(BePatient or BePractitioner or BeOrganization or CareTeam)
+* participant.member only Reference(BePatient or BePractitioner or BeOrganization or CareTeam or BePractitionerRole or BeRelatedPerson)
 * participant.member 1..1 MS
 * participant.role MS
+
 
 // managingOrganization -> the organization responsible for the CareTeam
 * managingOrganization only Reference(BeOrganization)

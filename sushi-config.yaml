@@ -15,8 +15,8 @@ title: "HL7 Belgium FHIR Implementation Guide: Patient Dossier"
 description: "HL7 Belgium FHIR Implementation Guide: Patient Dossier"
 status: active
 license: CC0-1.0
-date: 2026-03-27
-version: 1.0.0
+date: 2026-10-16
+version: 1.1.0
 
 # Although fhirVersions is 0..* in the ImplementationGuide resource
 # it can be a single item OR and array here (but so far SUSHI only
@@ -133,8 +133,8 @@ pages:
     title: Patient Dossier
   guidance.md:
     title: Guidance
-  #downloads.xml:
-    #title: Downloads
+  downloads.xml:
+    title: Downloads
 
 
 # The ImplementationGuide resource defines several other properties
@@ -162,7 +162,7 @@ menu:
   Home: index.html
   Guidance: guidance.html
   Artifacts: artifacts.html
-  #Downloads: downloads.html
+  Downloads: downloads.html
   History: https://www.ehealth.fgov.be/standards/fhir/patient-dossier/history.html
 
 # The parameters property represents IG.definition.parameter. Rather

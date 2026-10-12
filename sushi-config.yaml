@@ -184,6 +184,7 @@ parameters:
   path-expansion-params: ../../Parameters-terminology-expansion.json
   special-url: https://www.ehealth.fgov.be/standards/fhir/terminology
   path-history: https://www.ehealth.fgov.be/standards/fhir/patient-dossier/history.html
+  auto-oid-root: 2.16.840.1.113883.4.642.40.200.14
 
 # The FSHOnly flag indicates if only FSH resources should be exported.
 # If set to true, no IG related content will be generated.

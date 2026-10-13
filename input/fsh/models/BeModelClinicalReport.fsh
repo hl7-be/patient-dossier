@@ -3,7 +3,7 @@
 // Derived from "Careset Clinical Report V0.07 FR" business & functional specs.
 // V0.07 changes: Device is no longer an element of the report (the device that
 // produces the observations is carried by the ClinicalObservation CareSet);
-// Interpretation (0..*) added.
+// Interpretation (0..1, free text) added, plus a coded conclusion (0..*).
 // English name/short/definition inline; Dutch (nl) and French (fr) translations
 // added via `insert Xlate(...)` - one call per language (see rulesets.fsh).
 // Every element is Must Support (SU), per the Belgian conventions.

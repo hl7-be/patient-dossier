@@ -15,7 +15,9 @@
 //   interpretation     -> conclusion (text)     code                 -> code
 //   conclusion         -> conclusionCode (coded)
 // Per V0.07: Device is no longer an element of the report - the device that
-// produces the observations is carried by the ClinicalObservation CareSet.
+// produces the observations is carried by the ClinicalObservation CareSet. No
+// VS_Device is defined by this CareSet for the same reason: it is a transversal
+// value set, bound by the ClinicalObservation CareSet.
 // The model splits the former single 'interpretation' element in two: a free-text
 // interpretation (0..1 string) and a coded clinical conclusion (0..* CodeableConcept),
 // which map onto DiagnosticReport.conclusion and DiagnosticReport.conclusionCode
@@ -48,6 +50,9 @@ Description: "CareSet ClinicalReport: a clinical report that collects the essent
 * basedOn ^short = "Reference to the request underlying the report"
 
 // --- status (required binding to the FHIR value set is reused as-is) ---
+// No VS_Status is defined by this CareSet: DiagnosticReport.status already
+// carries a *required* binding to http://hl7.org/fhir/ValueSet/diagnostic-report-status
+// (final, partial, entered-in-error, ...), which is reused rather than duplicated.
 * status MS
 * status ^short = "Status of the report (default: final)"
 

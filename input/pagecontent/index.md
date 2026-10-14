@@ -29,30 +29,18 @@ This implementation guide contains the following types of resources:
 - **Profiles** — FHIR resource profiles constraining base resources to the Belgian context. The [BeDocument Bundle profile](StructureDefinition-be-document.html) constrains the FHIR Bundle to a document type containing a Composition and CareSet entries.
 - **Value Sets** — coded value sets used within the CareSets, primarily based on SNOMED CT, LOINC, and FHIR standard code systems.
 
-### How to Read This Guide
-
-- The **[Guidance](guidance.html)** page provides context on the methodology, conventions, and design principles used throughout this guide.
-- The **[Artifacts](artifacts.html)** page lists all profiles, extensions, and value sets defined in this guide.
 
 ### Dependencies
 
 This guide builds on:
 - [HL7 Belgium FHIR Core](https://www.ehealth.fgov.be/standards/fhir/core) — foundational Belgian FHIR resources and extensions (e.g. Belgian Patient, Practitioner, Organization identifiers).
 
-### Authors and Contributors
-
-This guide is published by the **eHealth Platform** as part of the **BeSafeShare** programme. For questions or feedback, contact [message-structure@ehealth.fgov.be](mailto:message-structure@ehealth.fgov.be).
-
-{% lang-fragment cross-version-analysis-inline.xhtml %}
- 
- 
-{% lang-fragment globals-table.xhtml %}
-
-
-{% lang-fragment expansion-params.xhtml %}
-
-
 {% lang-fragment dependency-table-short.xhtml %}
 
 
+### Cross Version Analysis
+
+{% lang-fragment cross-version-analysis-inline.xhtml %}
+
+### Intellectual Property Considerations
 {% lang-fragment ip-statements.xhtml %}

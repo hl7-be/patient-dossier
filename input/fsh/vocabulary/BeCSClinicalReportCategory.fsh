@@ -7,7 +7,7 @@
 
 CodeSystem: BeCSClinicalReportCategory
 Id: be-cs-clinicalreport-category
-Title: "BE CS ClinicalReport Category"
+Title: "ClinicalReport Category"
 Description: "Example CareSet-specific categories classifying a ClinicalReport by clinical or functional meaning."
 * ^status = #draft
 * ^experimental = true

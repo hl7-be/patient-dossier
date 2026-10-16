@@ -11,7 +11,7 @@
 
 Logical: BeModelClinicalReport
 Id: BeModelClinicalReport
-Title: "BE Model ClinicalReport"
+Title: "BeClinicalReport Model"
 Description: "Logical model of the CareSet ClinicalReport: a clinical report that collects the essential information for the follow-up of a patient over a defined period, consolidates the referenced clinical observations, reports and documents around a well-defined medical context, and may carry a clinical interpretation. It is intended to be shared between health professionals."
 * ^status = #draft
 * ^experimental = true

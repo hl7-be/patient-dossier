@@ -6,8 +6,8 @@
 
 ValueSet: BeVSClinicalReportCategory
 Id: be-vs-clinicalreport-category
-Title: "BE VS ClinicalReport Category"
-Description: "Categories classifying a ClinicalReport. Extensible: standardised codes (e.g. SNOMED CT 394583002 | Endocrinology) may also be used."
+Title: "ClinicalReport Category Value Set"
+Description: "Categories classifying a ClinicalReport. Extensible: standardised codes (e.g. SNOMED CT 394583002 &#124; Endocrinology) may also be used."
 * ^status = #draft
 * ^experimental = true
 * include codes from system BeCSClinicalReportCategory

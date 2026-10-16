@@ -133,6 +133,8 @@ pages:
     title: Patient Dossier
   guidance.md:
     title: Guidance
+  changes.md:
+    title: Changes
   downloads.xml:
     title: Downloads
 
@@ -162,6 +164,7 @@ menu:
   Home: index.html
   Guidance: guidance.html
   Artifacts: artifacts.html
+  Changes: changes.html
   Downloads: downloads.html
   History: https://www.ehealth.fgov.be/standards/fhir/patient-dossier/history.html
 

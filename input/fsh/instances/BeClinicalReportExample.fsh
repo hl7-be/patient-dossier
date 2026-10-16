@@ -1,7 +1,7 @@
 Instance: BeClinicalReportExample
 InstanceOf: BeClinicalReport
 Usage: #example
-Title: "Clinical Report Example"
+Title: "ClinicalReport Example"
 Description: "Technical example only. This instance is included for publication purposes and does not represent a real-world referral scenario."
 
 * extension[recordedDate].valueDateTime = "2026-10-01"

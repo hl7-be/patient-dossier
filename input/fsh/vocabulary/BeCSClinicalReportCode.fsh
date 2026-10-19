@@ -7,7 +7,7 @@
 
 CodeSystem: BeCSClinicalReportCode
 Id: be-cs-clinicalreport-code
-Title: "BE CS ClinicalReport Code"
+Title: "ClinicalReport Code"
 Description: "Example CareSet-specific codes for a ClinicalReport, indicating the type of procedure that produces the primary values of the report."
 * ^status = #draft
 * ^experimental = true

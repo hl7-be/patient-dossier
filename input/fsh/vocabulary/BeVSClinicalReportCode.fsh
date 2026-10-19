@@ -6,8 +6,8 @@
 
 ValueSet: BeVSClinicalReportCode
 Id: be-vs-clinicalreport-code
-Title: "BE VS ClinicalReport Code"
-Description: "Codes for a ClinicalReport. Extensible: standardised codes (e.g. SNOMED CT 439926003 | Ambulatory continuous glucose monitoring of interstitial tissue fluid) may also be used."
+Title: "ClinicalReport Code Value Set"
+Description: "Codes for a ClinicalReport. Extensible: standardised codes (e.g. SNOMED CT 439926003 &#124; Ambulatory continuous glucose monitoring of interstitial tissue fluid) may also be used."
 * ^status = #draft
 * ^experimental = true
 * include codes from system BeCSClinicalReportCode

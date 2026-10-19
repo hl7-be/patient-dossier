@@ -1,6 +1,6 @@
 Logical: BeModelDocument
 Id: BeModelDocument
-Title: "BeDocument model"
+Title: "BeDocument Model"
 Description: "Generic logical model for a FHIR document structuring and containing caresets."
 Characteristics: #can-be-target
 

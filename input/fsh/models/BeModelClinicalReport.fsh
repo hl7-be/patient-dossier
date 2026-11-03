@@ -13,8 +13,8 @@ Logical: BeModelClinicalReport
 Id: BeModelClinicalReport
 Title: "BeClinicalReport Model"
 Description: "Logical model of the CareSet ClinicalReport: a clinical report that collects the essential information for the follow-up of a patient over a defined period, consolidates the referenced clinical observations, reports and documents around a well-defined medical context, and may carry a clinical interpretation. It is intended to be shared between health professionals."
-* ^status = #draft
-* ^experimental = true
+* ^status = #active
+* ^experimental = false
 
 * businessIdentifier 1..* SU Identifier "Business identifier of the report" "Business identifier of the report."
 * insert Xlate(businessIdentifier, nl, "Zakelijke identificatie van het verslag.")

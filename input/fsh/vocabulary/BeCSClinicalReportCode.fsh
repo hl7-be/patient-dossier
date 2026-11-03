@@ -9,8 +9,8 @@ CodeSystem: BeCSClinicalReportCode
 Id: be-cs-clinicalreport-code
 Title: "ClinicalReport Code"
 Description: "Example CareSet-specific codes for a ClinicalReport, indicating the type of procedure that produces the primary values of the report."
-* ^status = #draft
-* ^experimental = true
+* ^status = #active
+* ^experimental = false
 * ^caseSensitive = true
 * #telenews "News Project"
   * ^designation[+].language = #fr

@@ -15,8 +15,8 @@ title: "HL7 Belgium FHIR Implementation Guide: Patient Dossier"
 description: "HL7 Belgium FHIR Implementation Guide: Patient Dossier"
 status: active
 license: CC0-1.0
-date: 2026-10-16
-version: 1.1.0
+date: 2026-10-30
+version: 1.1.1
 
 # Although fhirVersions is 0..* in the ImplementationGuide resource
 # it can be a single item OR and array here (but so far SUSHI only

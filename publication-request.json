@@ -1,12 +1,12 @@
 {
   "package-id": "hl7.fhir.be.patient-dossier",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "first": false,
   "status": "release",
   "sequence": "Trial Use",
   "fhirversion": "R4",
   "desc": "eHealth FHIR Patient Dossier Profiles for Belgium",
-  "path": "https://www.ehealth.fgov.be/standards/fhir/patient-dossier/1.1.0",
+  "path": "https://www.ehealth.fgov.be/standards/fhir/patient-dossier/1.1.1",
   "mode" : "milestone",
   "milestone" : true
 }

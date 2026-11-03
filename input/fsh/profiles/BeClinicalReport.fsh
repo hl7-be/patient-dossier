@@ -29,8 +29,8 @@ Parent: DiagnosticReport
 Id: be-clinicalreport
 Title: "BeClinicalReport"
 Description: "CareSet ClinicalReport: a clinical report that collects the essential information for the follow-up of a patient over a defined period, consolidates the referenced clinical observations, reports and documents around a well-defined medical context, and may carry a clinical interpretation. Based on the international DiagnosticReport resource and the Belgian eHealth Federal Core profiles."
-* ^status = #draft
-* ^experimental = true
+* ^status = #active
+* ^experimental = false
 
 // --- Extensions: reuse be-core (recordedDate, recorder, note)
 * extension contains

@@ -9,8 +9,8 @@ CodeSystem: BeCSClinicalReportCategory
 Id: be-cs-clinicalreport-category
 Title: "ClinicalReport Category"
 Description: "Example CareSet-specific categories classifying a ClinicalReport by clinical or functional meaning."
-* ^status = #draft
-* ^experimental = true
+* ^status = #active
+* ^experimental = false
 * ^caseSensitive = true
 * #telemonitoring-report "Telemonitoring Report"
   * ^designation[+].language = #fr

@@ -32,7 +32,7 @@ Characteristics: #can-be-target
 * author 1..1 Reference "The healthcare professional (recorder) who takes responsibility for what was recorded"
 
 // Is het moment waarop de CareSet werd aangemaakt
-* created 1..1 dateTime "Moment the CareSet was created"
+* created 0..1 dateTime "Moment the CareSet was created"
 
 // Duidt de status van de registratie van de CareSet. Zie VS_Status
 * status 1..1 code "Registration status of the CareSet" "planned | active | on-hold | finished | cancelled | entered-in-error"

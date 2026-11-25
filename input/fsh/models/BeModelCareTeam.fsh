@@ -32,7 +32,8 @@ Characteristics: #can-be-target
 // De deelnemers die opgenomen zijn in het CareTeam. Patient/Practitioner/Organization/CareTeam
 * participant 1..* BackboneElement "The participants included in the CareTeam"
   * member 1..1 Reference "The participant reference (BePatient/BePractitioner/BeOrganization/BeCareTeam/BeRelatedPerson/BePractitionerRole)"
-  * role 0..* CodeableConcept "The role of the participant in the team"
+  * role 0..1 CodeableConcept "The role of the participant in the team"
+  * period 0..1 Period "The period during which the participant holds that role"
 
 // De organisatie die verantwoordelijk is voor het CareTeam. Verwijst naar Organization
 * managingOrganization 0..1 Reference "The organization responsible for the CareTeam"

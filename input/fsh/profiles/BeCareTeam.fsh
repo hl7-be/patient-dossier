@@ -28,7 +28,15 @@ Description: "CareTeam profile realising the BeModelCareTeam logical model. Ever
 * participant 1..* MS
 * participant.member only Reference(BePatient or BePractitioner or BeOrganization or CareTeam or BePractitionerRole or RelatedPerson)
 * participant.member 1..1 MS
-* participant.role MS
+// role -> the role the participant plays in the CareTeam.
+// Limited to 0..1 (WG 2026-11-05, #28): one role per participant entry, so that
+// participant.period below is unambiguously the period of that role.
+* participant.role 0..1 MS
+
+// period -> the period during which the participant holds that role.
+// Must Support (WG 2026-11-05, #28): required by the ZOCO business validation,
+// which needs the period a person was active in the role.
+* participant.period 0..1 MS
 
 
 // managingOrganization -> the organization responsible for the CareTeam

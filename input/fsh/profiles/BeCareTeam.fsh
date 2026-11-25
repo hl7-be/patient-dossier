@@ -54,5 +54,4 @@ Description: "CareTeam profile realising the BeModelCareTeam logical model. Ever
 * extension contains
     BeCareSetRecordedDate named recordedDate 1..1 MS and
     BeCareSetCreated named created 0..1 MS and
-    $BeExtRecorder named author 1..1 MS and
-    BeCareTeamCarePlan named carePlan 0..* MS
+    $BeExtRecorder named author 1..1 MS

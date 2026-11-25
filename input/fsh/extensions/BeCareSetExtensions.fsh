@@ -22,10 +22,6 @@ Context: EpisodeOfCare, CareTeam
 * value[x] only dateTime
 * value[x] 1..1
 
-Extension: BeCareTeamCarePlan
-Id: be-ext-careteam-careplan
-Title: "CareTeam CarePlan"
-Description: "The CarePlan(s) containing the actions and goals the CareTeam will carry out or pursue."
-Context: CareTeam
-* value[x] only Reference(CarePlan)
-* value[x] 1..1
+// Note: there is deliberately no CareTeam -> CarePlan extension. The reference
+// between the two is kept in one direction only (WG 2026-11-05, #35), on the
+// native CarePlan.careTeam element, which BeCarePlan constrains to BeCareTeam.

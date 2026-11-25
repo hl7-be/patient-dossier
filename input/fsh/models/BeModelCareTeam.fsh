@@ -40,8 +40,9 @@ Characteristics: #can-be-target
 // De aandoening/probleem waarvoor het CareTeam werd samengesteld. Verwijst naar Condition
 * condition 0..* Reference "The condition/problem for which the CareTeam was assembled"
 
-// Het plan dat het CareTeam zal uitvoeren/nastreven. Verwijst naar de resource CarePlan
-* carePlan 0..* Reference "The CarePlan(s) the CareTeam will carry out / pursue"
+// Note: there is deliberately no CarePlan element here. The reference between
+// CareTeam and CarePlan is kept in one direction only (WG 2026-11-05, #35),
+// from CarePlan to CareTeam.
 
 // De persoon die het onderwerp is. Verwijst naar de resource Patient
 * patient 1..1 Reference "The person who is the subject of the records in this CareSet"

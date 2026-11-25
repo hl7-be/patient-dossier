@@ -1,3 +1,21 @@
+// =============================================================================
+// *** NOT TO MERGE ***
+//
+// The CarePlan / CareTeam CareSet artifacts live in hl7-be/patient-care, which
+// is where the updated profiles remain. This copy is kept on the careplan-team
+// branch only so the 5 November 2026 WG decisions stay traceable here, and must
+// not be merged into main.
+//
+// Decisions applied to both copies:
+//   patient-dossier#35  the CareTeam -> CarePlan link is removed; the reference
+//                       is one-directional, on the native CarePlan.careTeam.
+//   patient-dossier#28  participant.role is limited to 0..1 and
+//                       participant.period is Must Support.
+//
+// Ids are deliberately NOT aligned between the two repositories: patient-care
+// keeps be-careteam / be-care-plan, this copy keeps be-care-team.
+// =============================================================================
+
 Logical: BeModelCarePlan
 Id: be-model-care-plan
 Title: "BeCarePlan model"
